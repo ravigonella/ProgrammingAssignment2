@@ -43,3 +43,12 @@ cacheSolve <- function(x, ...) {
   x$setinverse(inv)
   inv
 }
+
+#Verification:
+#> x<- rbind(c(1, -1/4), c(-1/4, 2))
+#> m1<- makeCacheMatrix(x)
+#> p<-cacheSolve(m1)
+#> x%*%p
+#     [,1] [,2]
+#[1,]    1    0
+#[2,]    0    1
